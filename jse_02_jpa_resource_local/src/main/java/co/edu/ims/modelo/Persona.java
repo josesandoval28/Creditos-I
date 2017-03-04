@@ -24,7 +24,7 @@ public class Persona implements Serializable {
     
     // Contructores
     public Persona() { }
-       
+    
     public Persona(String nombre, String nacionalidad, Date fechaNacimiento) {
         this.nombre = nombre;
         this.nacionalidad = nacionalidad;

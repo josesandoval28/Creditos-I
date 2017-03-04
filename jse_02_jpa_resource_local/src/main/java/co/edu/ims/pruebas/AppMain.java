@@ -22,9 +22,9 @@ public class AppMain {
         // Se crea objeto en memoria (sin persistir aun).
         Genero accion = new Genero("Accion", "Peliculas de accion");
         
-        EntityTransaction tx = em.getTransaction();
-        tx.begin();
-        em.persist(accion); // Se persiste objeto en base de datos.
+        EntityTransaction tx = em.getTransaction();//se hace transaccion
+        tx.begin();//realiza una transaccion
+        em.persist(accion); // Se persiste objeto en base de datos., guarda el objeto en la base de datos
         tx.commit();
         
         // Se crea objeto en memoria (sin persistir aun).
@@ -33,8 +33,8 @@ public class AppMain {
                 "MX",
                 (new GregorianCalendar(1964, 9, 9)).getTime() );
         
-        tx.begin();
-        em.persist(guillermoDelToro); // Se persiste objeto en base de datos.
+        tx.begin();// inicializa una transaacion
+        em.persist(guillermoDelToro); // Se persiste objeto en base de datos. 
         tx.commit();
         
         // Se crea objeto en memoria (sin persistir aun).
